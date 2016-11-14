@@ -1,0 +1,105 @@
+html {
+	background-color: #b0c4de;
+	color: #b4b4b4;
+	font-family: "Verdana", Verdana, serif;
+	font-weight: normal;
+}
+
+div.substrate {
+	background: #2a2a2a; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#393939, #2d2d2d); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#393939, #2d2d2d); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#393939, #2d2d2d); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#393939, #2d2d2d); /* Standard syntax */
+
+    padding: 5px;
+}
+
+div.inputfield {
+	height: 25px;
+	width: 316px;
+
+	background: #3c3c3c;
+
+	margin: 5px;
+	padding: 2px;
+
+	/*border: 1px inset #292929;
+	border-radius: 5px;*/
+
+	text-align: right;
+
+	font-weight: bold;
+
+	-webkit-box-shadow: inset 1px 1px 2px 0 rgba(46,46,46,1);
+	-moz-box-shadow: inset 1px 1px 2px 0 rgba(46,46,46,1);
+	box-shadow: inset 1px 1px 0 2px rgba(46,46,46,1);
+}
+
+div.btn {
+	height: 25px;
+	width: 50px;
+
+	background: #2a2a2a; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#3b3b3b, #2a2a2a); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#3b3b3b, #2a2a2a); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#3b3b3b, #2a2a2a); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#3b3b3b, #2a2a2a); /* Standard syntax */
+
+    margin: 5px;
+    padding: 2px;
+
+    border: 1px solid #434343;
+    border-radius: 5px;
+
+    box-shadow: 1px 1px #1e1e1e;
+
+    text-align: center;
+}
+
+div.btn:hover {
+	border: 1px solid #afafaf;
+	border-radius: 5px;
+}
+
+div.btn:active {
+	-webkit-box-shadow: inset 1px 1px 2px 0 rgba(46,46,46,1);
+	-moz-box-shadow: inset 1px 1px 2px 0 rgba(46,46,46,1);
+	box-shadow: inset 1px 1px 0 2px rgba(46,46,46,1);
+
+	/*border-style: hidden;*/
+	border: 1px solid red;
+}
+
+div.longbtn {
+	height: 66px;
+}
+
+div.tallbtn {
+	width: 116px;
+}
+
+div.header {
+	color: black;
+}
+
+p.footer {
+	color: black;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.row {
+	float: left;
+}
+
+.rowbreaker {
+	clear: left;
+}
