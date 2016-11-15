@@ -198,5 +198,24 @@ function changeCSS(cssFile, cssLinkIndex) {
     document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
 }
 
+/**
+ * Initialize theme buttons.
+ */
+function initThemeChoiceButtons() {
+    var lightThemeBtn = document.querySelector('#lightTheme');
+    var lightThemePressed = function () {
+        changeCSS('css/lightTheme.css', 1);
+    };
+    lightThemeBtn.onclick = lightThemePressed;
+
+
+    var darkThemeBtn = document.querySelector('#darkTheme');
+    var darkThemePressed = function () {
+        changeCSS('css/darkTheme.css', 1);
+    };
+    darkThemeBtn.onclick = darkThemePressed;
+}
+
 initOperations();
 initNumberButtonsActions();
+initThemeChoiceButtons();
