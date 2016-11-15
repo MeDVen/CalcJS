@@ -96,6 +96,18 @@ function initOperations() {
         b = NaN;
     };
     btnAllClear.onclick = allClearPressed;
+
+    // polar
+    var btnPolar = document.querySelector('#polar');
+    var polarPressed = function () {
+        var valueField = document.querySelector('#valuefield');
+        var currentValue = Number(valueField.innerText);
+        if (currentValue !== 0) {
+            currentValue = currentValue *  (-1);
+            valueField.innerHTML = currentValue;
+        }
+    };
+    btnPolar.onclick = polarPressed;
 }
 
 /**
