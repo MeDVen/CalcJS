@@ -21,14 +21,26 @@ function initOperations() {
 
     // minus
     var btnMinus = document.querySelector('#minus');
+    var minusPressed = function () {
+        var valueField = document.querySelector('#valuefield');
+        a = valueField.innerText;
+        operation = minusOp;
+        valueField.innerHTML = 0;
+    };
+    btnMinus.onclick = minusPressed;
 
     // solve
     var btnSolve = document.querySelector('#solve');
     var solvePressed = function () {
         var valueField = document.querySelector('#valuefield');
         b = valueField.innerText;
-        answer = Number(a) + Number(b);
-        valueField.innerHTML = answer;
+        if (operation === plusOp) {
+            answer = Number(a) + Number(b);
+            valueField.innerHTML = answer;
+        } else if (operation === minusOp) {
+            answer = Number(a) - Number(b);
+            valueField.innerHTML = answer;
+        }
     };
     btnSolve.onclick = solvePressed;
 
