@@ -68,9 +68,9 @@ div.btn:hover {
 }
 
 div.btn:active {
-    -webkit-box-shadow: inset 1px 1px 2px 0 rgba(46,46,46,1);
-    -moz-box-shadow: inset 1px 1px 2px 0 rgba(46,46,46,1);
-    box-shadow: inset 1px 1px 0 2px rgba(46,46,46,1);
+    -webkit-box-shadow: inset 1px 1px 2px 0 rgb(142, 163, 180);
+    -moz-box-shadow: inset 1px 1px 2px 0 rgb(142, 163, 180);
+    box-shadow: inset 1px 1px 0 2px rgb(142, 163, 180);
 
     /*border-style: hidden;*/
     border: 1px solid #ff571f;
