@@ -7,7 +7,13 @@ var operation;
 
 var plusOp = 'plus';
 var minusOp = 'minus';
+var divideOp = 'divide';
+var multiplyOp = 'multiply';
+var noneOp = 'none';
 
+/**
+ * Initialize all math operations.
+ */
 function initOperations() {
     // plus
     var btnPlus = document.querySelector('#plus');
@@ -29,6 +35,26 @@ function initOperations() {
     };
     btnMinus.onclick = minusPressed;
 
+    // multiply
+    var btnMultiply = document.querySelector('#multiply');
+    var multiplyPressed = function () {
+        var valueField = document.querySelector('#valuefield');
+        a = valueField.innerText;
+        operation = multiplyOp;
+        valueField.innerHTML = 0;
+    };
+    btnMultiply.onclick = multiplyPressed;
+
+    // divide
+    var btnDivide = document.querySelector('#divide');
+    var dividePressed = function () {
+        var valueField = document.querySelector('#valuefield');
+        a = valueField.innerText;
+        operation = divideOp;
+        valueField.innerHTML = 0;
+    };
+    btnDivide.onclick = dividePressed;
+
     // solve
     var btnSolve = document.querySelector('#solve');
     var solvePressed = function () {
@@ -40,7 +66,16 @@ function initOperations() {
         } else if (operation === minusOp) {
             answer = Number(a) - Number(b);
             valueField.innerHTML = answer;
+        } else if (operation === multiplyOp) {
+            answer = Number(a) * Number(b);
+            valueField.innerHTML = answer;
+        } else if (operation === divideOp) {
+            answer = Number(a) / Number(b);
+            valueField.innerHTML = answer;
+        } else {
+            console.log('Current operation is \'none\' or not initialized.');
         }
+        operation = noneOp;
     };
     btnSolve.onclick = solvePressed;
 
@@ -51,6 +86,16 @@ function initOperations() {
         valueField.innerHTML = 0;
     };
     btnClear.onclick = clearPressed;
+
+    // all clear
+    var btnAllClear = document.querySelector('#allclear');
+    var allClearPressed = function () {
+        var valueField = document.querySelector('#valuefield');
+        valueField.innerHTML = 0;
+        a = NaN;
+        b = NaN;
+    };
+    btnAllClear.onclick = allClearPressed;
 }
 
 /**
