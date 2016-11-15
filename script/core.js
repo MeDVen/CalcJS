@@ -2,9 +2,37 @@ console.log('Hello! This is CalcJS!');
 
 var a;
 var b;
+var answer;
 var operation;
 
+var plusOp = 'plus';
+var minusOp = 'minus';
+
 function initOperations() {
+    // plus
+    var btnPlus = document.querySelector('#plus');
+    var plusPressed = function () {
+        var valueField = document.querySelector('#valuefield');
+        a = valueField.innerText;
+        operation = plusOp;
+        valueField.innerHTML = 0;
+    };
+    btnPlus.onclick = plusPressed;
+
+    // minus
+    var btnMinus = document.querySelector('#minus');
+
+    // solve
+    var btnSolve = document.querySelector('#solve');
+    var solvePressed = function () {
+        var valueField = document.querySelector('#valuefield');
+        b = valueField.innerText;
+        answer = Number(a) + Number(b);
+        valueField.innerHTML = answer;
+    };
+    btnSolve.onclick = solvePressed;
+
+    // clear
     var btnClear = document.querySelector('#clear');
     var clearPressed = function () {
         var valueField = document.querySelector('#valuefield');
