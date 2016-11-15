@@ -9,7 +9,19 @@ var plusOp = 'plus';
 var minusOp = 'minus';
 var divideOp = 'divide';
 var multiplyOp = 'multiply';
+var percentOp = 'percent';
 var noneOp = 'none';
+
+/**
+ * Fill operand a and operation
+ * @param operationId current operation
+ */
+function fillOperandA(operationId) {
+    var valueField = document.querySelector('#valuefield');
+    a = valueField.innerText;
+    operation = operationId;
+    valueField.innerHTML = 0;
+}
 
 /**
  * Initialize all math operations.
@@ -18,40 +30,28 @@ function initOperations() {
     // plus
     var btnPlus = document.querySelector('#plus');
     var plusPressed = function () {
-        var valueField = document.querySelector('#valuefield');
-        a = valueField.innerText;
-        operation = plusOp;
-        valueField.innerHTML = 0;
+        fillOperandA(plusOp);
     };
     btnPlus.onclick = plusPressed;
 
     // minus
     var btnMinus = document.querySelector('#minus');
     var minusPressed = function () {
-        var valueField = document.querySelector('#valuefield');
-        a = valueField.innerText;
-        operation = minusOp;
-        valueField.innerHTML = 0;
+        fillOperandA(minusOp);
     };
     btnMinus.onclick = minusPressed;
 
     // multiply
     var btnMultiply = document.querySelector('#multiply');
     var multiplyPressed = function () {
-        var valueField = document.querySelector('#valuefield');
-        a = valueField.innerText;
-        operation = multiplyOp;
-        valueField.innerHTML = 0;
+        fillOperandA(multiplyOp);
     };
     btnMultiply.onclick = multiplyPressed;
 
     // divide
     var btnDivide = document.querySelector('#divide');
     var dividePressed = function () {
-        var valueField = document.querySelector('#valuefield');
-        a = valueField.innerText;
-        operation = divideOp;
-        valueField.innerHTML = 0;
+        fillOperandA(divideOp);
     };
     btnDivide.onclick = dividePressed;
 
