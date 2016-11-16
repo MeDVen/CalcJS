@@ -103,7 +103,7 @@ function initOperations() {
         var valueField = document.querySelector('#valuefield');
         var currentValue = Number(valueField.innerText);
         if (currentValue !== 0) {
-            currentValue = currentValue *  (-1);
+            currentValue = currentValue * (-1);
             valueField.innerHTML = currentValue;
         }
     };
@@ -188,14 +188,14 @@ function fillValueField(value) {
  * @param cssLinkIndex css link index from header
  */
 function changeCSS(cssFile, cssLinkIndex) {
-    var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+    var oldLink = document.getElementsByTagName("link").item(cssLinkIndex);
 
-    var newlink = document.createElement("link");
-    newlink.setAttribute("rel", "stylesheet");
-    newlink.setAttribute("type", "text/css");
-    newlink.setAttribute("href", cssFile);
+    var newLink = document.createElement("link");
+    newLink.setAttribute("rel", "stylesheet");
+    newLink.setAttribute("type", "text/css");
+    newLink.setAttribute("href", cssFile);
 
-    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+    document.getElementsByTagName("head").item(0).replaceChild(newLink, oldLink);
 }
 
 /**

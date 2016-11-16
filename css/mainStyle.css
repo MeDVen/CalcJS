@@ -69,3 +69,25 @@
     /*border-style: hidden;*/
     border: 1px solid #ff571f;
 }
+
+span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.row {
+    float: left;
+}
+
+.rowbreaker {
+    clear: left;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
